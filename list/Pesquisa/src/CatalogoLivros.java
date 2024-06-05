@@ -16,41 +16,57 @@ public class CatalogoLivros {
         System.out.println(listLivro);
     }
 
-    public void pesquisarPorTitulo(String titulo){
-        for( Livro t : listLivro){
-            if( t.getTitulo().equalsIgnoreCase(titulo)){
-                System.out.println(t);
+    public Livro pesquisarPorTitulo(String titulo){
+        Livro livroPorTitulo = null;
+        if(!listLivro.isEmpty()){
+            for(Livro l : listLivro){
+                if(l.getTitulo().equalsIgnoreCase(titulo)){
+                    livroPorTitulo = l;
+                    break;
+                }
             }
         }
+        return livroPorTitulo;
     }
 
-    public void pesquisarPorAutor(String autor){
-        for(Livro t : listLivro){
-            if(t.getAutor().equalsIgnoreCase(autor)){
-                System.out.println(t);
+    public List<Livro> pesquisaPorAutor(String autor){
+        List<Livro> listaPorAutor = new ArrayList<>();
+        if(!listLivro.isEmpty()){
+            for(Livro l : listLivro){
+                if(l.getAutor().equalsIgnoreCase(autor)){
+                    listaPorAutor.add(l);
+                }
             }
         }
+        return listaPorAutor;
     }
 
-    public void pesquisarPorIntervalo( int ano1, int ano2){
-        for(Livro t : listLivro){
-            if( t.getAnoPublicacao() >= ano1 && t.getAnoPublicacao() <= ano2){
-                System.out.println(t);
+    public List<Livro> pesquisarPorIntervalo(int ano1, int ano2){
+        List<Livro> listaPorIntervalo = new ArrayList<>();
+        if(!listLivro.isEmpty()){
+            for(Livro l : listLivro){
+                if(l.getAnoPublicacao() >= ano1 && l.getAnoPublicacao() <= ano2){
+                    listaPorIntervalo.add(l);
+                }
             }
         }
+        return listaPorIntervalo;
     }
 
 
 
         public static void main(String[] args) {
         CatalogoLivros catalogoLivros = new CatalogoLivros();
-        System.out.println(catalogoLivros.listLivro.size());
-        catalogoLivros.adicionarLivro("Grandes Sertoes", "Guimarares Rosa", 1956);
-        System.out.println(catalogoLivros.listLivro.size());
+        catalogoLivros.adicionarLivro("Livro 1", "Autor 1", 1990);
+        catalogoLivros.adicionarLivro("Livro 1", "Autor 2", 2000);
+        catalogoLivros.adicionarLivro("Livro 3", "Autor 2", 2010);
+        catalogoLivros.adicionarLivro("Livro 4", "Autor 3", 2020);
+        catalogoLivros.adicionarLivro("Livro 5", "Autor 4", 2005);
         catalogoLivros.obterDescricaoLivro();
-        catalogoLivros.pesquisarPorTitulo("Grandes Sertoes");
-        catalogoLivros.adicionarLivro("As meninas", "Lygia Fagundes Telles", 1973);
-        catalogoLivros.pesquisarPorIntervalo(1900,2000);
+        catalogoLivros.pesquisaPorAutor("Autor 1");
+        System.out.println(catalogoLivros.pesquisaPorAutor("Autor 2"));
+        System.out.println(catalogoLivros.pesquisarPorIntervalo(2000,2005));
+
        
 
     }
