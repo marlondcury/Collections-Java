@@ -3,8 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/list/OperacoesBasicas/OperacoesBasicas.iml" filepath="$PROJECT_DIR$/list/OperacoesBasicas/OperacoesBasicas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Set/OperacoesBasicasSet/OperacoesBasicasSet.iml" filepath="$PROJECT_DIR$/Set/OperacoesBasicasSet/OperacoesBasicasSet.iml" />
       <module fileurl="file://$PROJECT_DIR$/list/Ordenacao/Ordenacao.iml" filepath="$PROJECT_DIR$/list/Ordenacao/Ordenacao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Set/OrdenacaoSet/OrdenacaoSet.iml" filepath="$PROJECT_DIR$/Set/OrdenacaoSet/OrdenacaoSet.iml" />
       <module fileurl="file://$PROJECT_DIR$/list/Pesquisa/Pesquisa.iml" filepath="$PROJECT_DIR$/list/Pesquisa/Pesquisa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Set/PesquisaSet/PesquisaSet.iml" filepath="$PROJECT_DIR$/Set/PesquisaSet/PesquisaSet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Set/Set.iml" filepath="$PROJECT_DIR$/Set/Set.iml" />
       <module fileurl="file://$PROJECT_DIR$/collections-java-api-2023-exercicios.iml" filepath="$PROJECT_DIR$/collections-java-api-2023-exercicios.iml" />
       <module fileurl="file://$PROJECT_DIR$/list/list.iml" filepath="$PROJECT_DIR$/list/list.iml" />
     </modules>
